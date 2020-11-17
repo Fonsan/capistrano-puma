@@ -11,8 +11,9 @@ module Capistrano
     end
 
     def set_defaults
-      set_if_empty :puma_systemd_conf_dir, '/etc/systemd/system'
       set_if_empty :puma_systemctl_bin, '/bin/systemctl'
+      set_if_empty :puma_systemd_conf_dir, '/etc/systemd/system'
+      set_if_empty :puma_systemd_usermode, false
       set_if_empty :puma_service_unit_name, 'puma'
     end
   end
